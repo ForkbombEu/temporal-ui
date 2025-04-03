@@ -8,6 +8,7 @@ import { eventViewType } from './stores/event-view';
 import { currentEventHistory, fullEventHistory } from './stores/events';
 import type { WorkflowRunWithWorkers } from './stores/workflow-run';
 import { workflowRun } from './stores/workflow-run';
+import { workflows } from './stores/workflows';
 import type { HistoryEvent, WorkflowEvent } from './types/events';
 
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
@@ -22,6 +23,7 @@ export {
   WorkflowHistoryLayout,
   workflowRun,
   WorkflowsWithNewSearch,
+  workflows,
 };
 
 export type { HistoryEvent, WorkflowRunWithWorkers, WorkflowEvent };
