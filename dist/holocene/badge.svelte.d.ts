@@ -2,9 +2,9 @@ import { SvelteComponentTyped } from "svelte";
 import { type VariantProps } from 'class-variance-authority';
 export type BadgeType = VariantProps<typeof types>['type'];
 declare const types: (props?: {
-    type?: "default" | "success" | "warning" | "count" | "primary" | "secondary" | "danger" | "subtle";
+    type?: "default" | "success" | "warning" | "primary" | "count" | "secondary" | "danger" | "subtle";
 } & import("class-variance-authority/dist/types").ClassProp) => string;
-export declare const badgeTypes: ("default" | "success" | "warning" | "count" | "primary" | "secondary" | "danger" | "subtle")[];
+export declare const badgeTypes: ("default" | "success" | "warning" | "primary" | "count" | "secondary" | "danger" | "subtle")[];
 declare const __propDef: {
     props: {
         type?: BadgeType | undefined | null | false;

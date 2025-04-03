@@ -9,3 +9,4 @@ import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
 export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, };
 export type { HistoryEvent, WorkflowRunWithWorkers, WorkflowEvent };
+export declare function initI18n(): Promise<void>;

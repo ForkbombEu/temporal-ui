@@ -3,7 +3,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         delay?: number;
-        status?: "Running" | "TimedOut" | "Completed" | "Failed" | "ContinuedAsNew" | "Canceled" | "Terminated" | "Unspecified" | "Scheduled" | "Open" | "New" | "Started" | "Initiated" | "Fired" | "CancelRequested" | "Signaled" | "Pending" | "Retrying" | "Paused";
+        status?: "Unspecified" | "Scheduled" | "Open" | "New" | "Started" | "Initiated" | "Running" | "Completed" | "Fired" | "CancelRequested" | "TimedOut" | "Signaled" | "Canceled" | "Failed" | "Terminated" | "Paused" | "Pending" | "Retrying" | "ContinuedAsNew";
         count?: number | undefined;
         loading?: boolean;
         newCount?: number | undefined;
