@@ -1,6 +1,6 @@
 {
   "name": "@forkbombeu/temporal-ui",
-  "version": "2.36.10",
+  "version": "0.0.1",
   "engines": {
     "pnpm": ">=8.6.0",
     "node": ">=18.15.0"
