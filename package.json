@@ -14,16 +14,6 @@
   ],
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
-  "exports": {
-    "./*.svelte": {
-      "types": "./dist/*.svelte.d.ts",
-      "svelte": "./dist/*.svelte"
-    },
-    "./*": {
-      "types": "./dist/*.d.ts",
-      "import": "./dist/*.js"
-    }
-  },
   "files": [
     "dist/**/*",
     "!dist/**/*.test.*",
