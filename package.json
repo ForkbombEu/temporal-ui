@@ -73,7 +73,9 @@
     "generate:locales": "esno scripts/generate-locales.ts",
     "workflows": "esno scripts/workflows.ts",
     "audit:tailwind": "esno scripts/audit-tailwind-colors",
-    "audit:holocene-props": "esno scripts/generate-holocene-props.ts"
+    "audit:holocene-props": "esno scripts/generate-holocene-props.ts",
+    "build:css": "tailwindcss -i ./src/app.css -o ./src/lib/temporal.css",
+    "prepackage": "pnpm build:css"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.17.0",
@@ -234,7 +236,10 @@
   },
   "peerDependencies": {
     "date-fns": "2.29.x",
-    "date-fns-tz": "1.3.x"
+    "date-fns-tz": "1.3.x",
+    "tailwindcss": "*",
+    "svelte": "*",
+    "@sveltejs/kit": "*"
   },
   "packageManager": "pnpm@8.15.7+sha256.50783dd0fa303852de2dd1557cd4b9f07cb5b018154a6e76d0f40635d6cee019"
 }
