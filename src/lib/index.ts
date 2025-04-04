@@ -14,7 +14,6 @@ import { workflowRun } from './stores/workflow-run';
 import type { HistoryEvent, WorkflowEvent } from './types/events';
 import type { ListWorkflowExecutionsResponse } from './types/workflows';
 
-import WorkflowView from './custom.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
 
@@ -28,7 +27,6 @@ export {
   WorkflowHistoryLayout,
   workflowRun,
   WorkflowsWithNewSearch,
-  WorkflowView,
 };
 
 export type {

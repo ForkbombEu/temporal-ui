@@ -6,10 +6,9 @@ import { toWorkflowExecution, toWorkflowExecutions, } from './models/workflow-ex
 import { eventViewType } from './stores/event-view';
 import { currentEventHistory, fullEventHistory } from './stores/events';
 import { workflowRun } from './stores/workflow-run';
-import WorkflowView from './custom.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
-export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, WorkflowView, };
+export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, };
 //
 export async function initI18n() {
     await i18next.init({
