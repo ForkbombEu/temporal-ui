@@ -1,13 +1,13 @@
 import { toEventHistory } from './models/event-history';
-import { toWorkflowExecution } from './models/workflow-execution';
+import { toWorkflowExecution, toWorkflowExecutions } from './models/workflow-execution';
 import { eventViewType } from './stores/event-view';
 import { currentEventHistory, fullEventHistory } from './stores/events';
 import type { WorkflowRunWithWorkers } from './stores/workflow-run';
 import { workflowRun } from './stores/workflow-run';
-import { workflows } from './stores/workflows';
 import type { HistoryEvent, WorkflowEvent } from './types/events';
+import type { ListWorkflowExecutionsResponse } from './types/workflows';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
-export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, workflows, };
-export type { HistoryEvent, WorkflowRunWithWorkers, WorkflowEvent };
+export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, };
+export type { HistoryEvent, WorkflowRunWithWorkers, WorkflowEvent, ListWorkflowExecutionsResponse, };
 export declare function initI18n(): Promise<void>;
