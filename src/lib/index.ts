@@ -17,6 +17,7 @@ import { toWorkflowStatusReadable } from './utilities/screaming-enums';
 
 import WorkflowStatus from './components/workflow-status.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
+import WorkflowRunLayout from './layouts/workflow-run-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
 
 export {
@@ -31,6 +32,7 @@ export {
   WorkflowsWithNewSearch,
   WorkflowStatus,
   toWorkflowStatusReadable,
+  WorkflowRunLayout,
 };
 
 export type {
