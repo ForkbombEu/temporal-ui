@@ -8,6 +8,7 @@ import {
   toWorkflowExecutions,
 } from './models/workflow-execution';
 import { eventViewType } from './stores/event-view';
+import { pauseLiveUpdates } from './stores/events';
 import { currentEventHistory, fullEventHistory } from './stores/events';
 import type { WorkflowRunWithWorkers } from './stores/workflow-run';
 import { workflowRun } from './stores/workflow-run';
@@ -33,6 +34,7 @@ export {
   WorkflowStatus,
   toWorkflowStatusReadable,
   WorkflowRunLayout,
+  pauseLiveUpdates,
 };
 
 export type {
