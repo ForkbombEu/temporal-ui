@@ -13,7 +13,9 @@ import type { WorkflowRunWithWorkers } from './stores/workflow-run';
 import { workflowRun } from './stores/workflow-run';
 import type { HistoryEvent, WorkflowEvent } from './types/events';
 import type { ListWorkflowExecutionsResponse } from './types/workflows';
+import { toWorkflowStatusReadable } from './utilities/screaming-enums';
 
+import WorkflowStatus from './components/workflow-status.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
 
@@ -27,6 +29,8 @@ export {
   WorkflowHistoryLayout,
   workflowRun,
   WorkflowsWithNewSearch,
+  WorkflowStatus,
+  toWorkflowStatusReadable,
 };
 
 export type {
