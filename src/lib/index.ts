@@ -13,7 +13,11 @@ import { currentEventHistory, fullEventHistory } from './stores/events';
 import type { WorkflowRunWithWorkers } from './stores/workflow-run';
 import { workflowRun } from './stores/workflow-run';
 import type { HistoryEvent, WorkflowEvent } from './types/events';
-import type { ListWorkflowExecutionsResponse } from './types/workflows';
+import type {
+  ListWorkflowExecutionsResponse,
+  WorkflowExecution,
+} from './types/workflows';
+import { formatDistanceAbbreviated } from './utilities/format-time';
 import { toWorkflowStatusReadable } from './utilities/screaming-enums';
 
 import WorkflowStatus from './components/workflow-status.svelte';
@@ -35,6 +39,7 @@ export {
   toWorkflowStatusReadable,
   WorkflowRunLayout,
   pauseLiveUpdates,
+  formatDistanceAbbreviated,
 };
 
 export type {
@@ -59,5 +64,13 @@ export async function initI18n() {
       lookupLocalStorage: 'locale',
     },
     resources,
+  });
+}
+
+export function calculateElapsedTime(workflow: WorkflowExecution) {
+  return formatDistanceAbbreviated({
+    start: workflow?.startTime,
+    end: workflow?.endTime || Date.now(),
+    includeMilliseconds: true,
   });
 }

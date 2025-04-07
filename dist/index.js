@@ -7,12 +7,13 @@ import { eventViewType } from './stores/event-view';
 import { pauseLiveUpdates } from './stores/events';
 import { currentEventHistory, fullEventHistory } from './stores/events';
 import { workflowRun } from './stores/workflow-run';
+import { formatDistanceAbbreviated } from './utilities/format-time';
 import { toWorkflowStatusReadable } from './utilities/screaming-enums';
 import WorkflowStatus from './components/workflow-status.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowRunLayout from './layouts/workflow-run-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
-export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, WorkflowStatus, toWorkflowStatusReadable, WorkflowRunLayout, pauseLiveUpdates, };
+export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, WorkflowStatus, toWorkflowStatusReadable, WorkflowRunLayout, pauseLiveUpdates, formatDistanceAbbreviated, };
 //
 export async function initI18n() {
     await i18next.init({
@@ -27,5 +28,12 @@ export async function initI18n() {
             lookupLocalStorage: 'locale',
         },
         resources,
+    });
+}
+export function calculateElapsedTime(workflow) {
+    return formatDistanceAbbreviated({
+        start: workflow === null || workflow === void 0 ? void 0 : workflow.startTime,
+        end: (workflow === null || workflow === void 0 ? void 0 : workflow.endTime) || Date.now(),
+        includeMilliseconds: true,
     });
 }
