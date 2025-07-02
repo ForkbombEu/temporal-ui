@@ -3,6 +3,7 @@ import { i18nNamespaces } from './i18n';
 import resources from './i18n/locales';
 import { toEventHistory } from './models/event-history';
 import { toWorkflowExecution, toWorkflowExecutions, } from './models/workflow-execution';
+import { workflowStatuses } from './models/workflow-status';
 import { eventViewType } from './stores/event-view';
 import { pauseLiveUpdates } from './stores/events';
 import { currentEventHistory, fullEventHistory } from './stores/events';
@@ -13,7 +14,7 @@ import WorkflowStatus from './components/workflow-status.svelte';
 import WorkflowHistoryLayout from './layouts/workflow-history-layout.svelte';
 import WorkflowRunLayout from './layouts/workflow-run-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
-export { eventViewType, toEventHistory, currentEventHistory, fullEventHistory, toWorkflowExecution, toWorkflowExecutions, WorkflowHistoryLayout, workflowRun, WorkflowsWithNewSearch, WorkflowStatus, toWorkflowStatusReadable, WorkflowRunLayout, pauseLiveUpdates, formatDistanceAbbreviated, };
+export { currentEventHistory, eventViewType, formatDistanceAbbreviated, fullEventHistory, pauseLiveUpdates, toEventHistory, toWorkflowExecution, toWorkflowExecutions, toWorkflowStatusReadable, WorkflowHistoryLayout, workflowRun, WorkflowRunLayout, WorkflowStatus, workflowStatuses, WorkflowsWithNewSearch, };
 //
 export async function initI18n() {
     await i18next.init({

@@ -7,6 +7,7 @@ import {
   toWorkflowExecution,
   toWorkflowExecutions,
 } from './models/workflow-execution';
+import { workflowStatuses } from './models/workflow-status';
 import { eventViewType } from './stores/event-view';
 import { pauseLiveUpdates } from './stores/events';
 import { currentEventHistory, fullEventHistory } from './stores/events';
@@ -26,27 +27,28 @@ import WorkflowRunLayout from './layouts/workflow-run-layout.svelte';
 import WorkflowsWithNewSearch from './pages/workflows-with-new-search.svelte';
 
 export {
-  eventViewType,
-  toEventHistory,
   currentEventHistory,
+  eventViewType,
+  formatDistanceAbbreviated,
   fullEventHistory,
+  pauseLiveUpdates,
+  toEventHistory,
   toWorkflowExecution,
   toWorkflowExecutions,
+  toWorkflowStatusReadable,
   WorkflowHistoryLayout,
   workflowRun,
-  WorkflowsWithNewSearch,
-  WorkflowStatus,
-  toWorkflowStatusReadable,
   WorkflowRunLayout,
-  pauseLiveUpdates,
-  formatDistanceAbbreviated,
+  WorkflowStatus,
+  workflowStatuses,
+  WorkflowsWithNewSearch,
 };
 
 export type {
   HistoryEvent,
-  WorkflowRunWithWorkers,
-  WorkflowEvent,
   ListWorkflowExecutionsResponse,
+  WorkflowEvent,
+  WorkflowRunWithWorkers,
 };
 
 //
