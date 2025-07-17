@@ -57,7 +57,7 @@
     <HistoryGraph {groups} history={history(visibleItems)} />
   {/if}
   <div class="w-full">
-    {#each visibleItems as event, index}
+    {#each visibleItems as event, index (JSON.stringify(event))}
       {#if isEventGroup(event)}
         <EventSummaryRow
           {event}
