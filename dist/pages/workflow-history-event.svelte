@@ -79,7 +79,7 @@ $: lastEventId = (_a = $fullEventHistory[$fullEventHistory.length - 1]) === null
   <table>
     <thead></thead>
     <tbody>
-      {#each visibleItems as event, index}
+      {#each visibleItems as event, index (event.id)}
         <EventSummaryRow
           {event}
           {index}
