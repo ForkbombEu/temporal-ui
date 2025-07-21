@@ -41,7 +41,7 @@ $: filteredForStatus = (items) => getFailedOrPendingEvents(items, $eventStatusFi
     <HistoryGraph {groups} history={history(visibleItems)} />
   {/if}
   <div class="w-full">
-    {#each visibleItems as event, index (JSON.stringify(event))}
+    {#each visibleItems as event, index (index)}
       {#if isEventGroup(event)}
         <EventSummaryRow
           {event}

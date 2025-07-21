@@ -104,7 +104,7 @@
   <table>
     <thead></thead>
     <tbody>
-      {#each visibleItems as event, index (event.id)}
+      {#each visibleItems as event, index (index)}
         <EventSummaryRow
           {event}
           {index}

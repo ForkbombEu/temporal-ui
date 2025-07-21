@@ -45,7 +45,7 @@ $: getMaxWidth(history);
       height={canvasHeight}
       width={canvasWidth}
     >
-      {#each history as event, index}
+      {#each history as event, index (index)}
         {@const group = getGroupForEventOrPendingEvent(allGroups, event)}
         <HistoryGraphRowVisual
           {event}
